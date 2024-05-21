@@ -38,7 +38,7 @@ function GetStarted() {
           Want to explore without an account? <Link to="/courses" className="text-blue-500">Explore as a guest</Link>.
         </p>
       </div>
-      <form action="http://localhost:8000/users/auth/google" method="post" className="hidden" id="googleLoginForm" target="_self">
+      <form action="https://coursebay-backend-a1dy.onrender.com/users/auth/google" method="post" className="hidden" id="googleLoginForm" target="_self">
       <input type="submit" value="Sign Up with Google" />
       </form>
 

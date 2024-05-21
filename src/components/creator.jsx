@@ -19,12 +19,11 @@ function Creator() {
 
     const fetchUserData = async () => {
         try {
-          const response = await fetch('http://localhost:8000/users/username', {
+          const response = await fetch('https://coursebay-backend-a1dy.onrender.com/users/username', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
               'Accept': 'application/json',
-              'Access-Control-Allow-Origin': 'http://localhost:5173',
             },
             credentials: 'include'
           });
@@ -48,13 +47,12 @@ function Creator() {
     const sendCodeToBackend = () => {
         const newCode = generateRandomCode();
         setCode(newCode);
-        fetch("http://localhost:8000/users/creator", {
+        fetch("https://coursebay-backend-a1dy.onrender.com/users/creator", {
             method: "POST",
             // credentials: 'include',
             headers: {
                 "Content-Type": "application/json",
                 'Accept': 'application/json',
-                'Access-Control-Allow-Origin': 'http://localhost:5173',
             },
             body: JSON.stringify({
                 code: newCode,
@@ -84,13 +82,13 @@ function Creator() {
     const handleVerification = () => {
         if (inputValue === code.toString()) {
             alert("Code verified successfully")
-            fetch("http://localhost:8000/users/makeCreator" , {
+            fetch("https://coursebay-backend-a1dy.onrender.com/users/makeCreator" , {
                 method:"POST",
                 credentials: "include",
                 headers: {
                     "Content-Type": "application/json",
                     'Accept': 'application/json',
-                    'Access-Control-Allow-Origin': 'http://localhost:5173',
+
                 }
             })
             .then(response => {
@@ -110,13 +108,12 @@ function Creator() {
 
     const signOut = async () => {
         try {
-          const response = await fetch('http://localhost:8000/users/sign-out', {
+          const response = await fetch('https://coursebay-backend-a1dy.onrender.com/users/sign-out', {
             method: 'POST',
             credentials: 'include',
             headers: {
               'Content-Type': 'application/json',
               'Accept': 'application/json',
-              'Access-Control-Allow-Origin': 'http://localhost:5173',
             },
           });
     

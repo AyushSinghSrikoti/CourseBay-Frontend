@@ -14,12 +14,11 @@ function Courses() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('http://localhost:8000/course/get-course-data', {
+                const response = await fetch('https://coursebay-backend-a1dy.onrender.com/course/get-course-data', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                         'Accept': 'application/json',
-                        'Access-Control-Allow-Origin': 'http://localhost:5173',
                     },
                 });
 

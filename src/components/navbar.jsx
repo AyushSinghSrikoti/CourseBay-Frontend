@@ -43,12 +43,11 @@ function Navbar() {
           }
           setApiCalled(true);
         } else if (!apiCalled) {
-          const response = await fetch('http://localhost:8000/users/username', {
+          const response = await fetch('https://coursebay-backend-a1dy.onrender.com/users/username', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
               'Accept': 'application/json',
-              'Access-Control-Allow-Origin': 'http://localhost:5173',
             },
             credentials: 'include',
           });

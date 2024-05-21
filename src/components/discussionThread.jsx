@@ -22,12 +22,11 @@ function DiscussionThread({ course }) {
     useEffect(() => {
         const fetchReviews = async () => {
             try {
-                const response = await fetch(`http://localhost:8000/course/fetchReviews`,{
+                const response = await fetch(`https://coursebay-backend-a1dy.onrender.com/course/fetchReviews`,{
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                     'Accept': 'application/json',
-                    'Access-Control-Allow-Origin': 'http://localhost:5173',
                 },
                 body: JSON.stringify({ courseId: course._id }),
                 });
@@ -61,12 +60,11 @@ function DiscussionThread({ course }) {
         };
 
         try{
-            const response = await fetch('http://localhost:8000/course/postReview',{
+            const response = await fetch('https://coursebay-backend-a1dy.onrender.com/course/postReview',{
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                     'Accept': 'application/json',
-                    'Access-Control-Allow-Origin': 'http://localhost:5173',
                 },
                 body: JSON.stringify(newReviewData)
             });

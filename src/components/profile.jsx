@@ -36,12 +36,11 @@ function Profile() {
 
   const fetchUserData = async () => {
     try {
-      const response = await fetch('http://localhost:8000/users/username', {
+      const response = await fetch('https://coursebay-backend-a1dy.onrender.com/users/username', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json',
-          'Access-Control-Allow-Origin': 'http://localhost:5173',
         },
         credentials: 'include'
       });
@@ -71,12 +70,11 @@ function Profile() {
       formData.append("avatar", newAvatar);
       formData.append("username", newUsername);
 
-      const response = await axios.post('http://localhost:8000/users/update-profile', formData, {
+      const response = await axios.post('https://coursebay-backend-a1dy.onrender.com/users/update-profile', formData, {
         withCredentials: true,
         headers: {
           'Content-Type': 'multipart/form-data',
           'Accept': 'application/json',
-          'Access-Control-Allow-Origin': 'http://localhost:5173',
         },
       });
 
@@ -93,13 +91,12 @@ function Profile() {
 
   const signOut = async () => {
     try {
-      const response = await fetch('http://localhost:8000/users/sign-out', {
+      const response = await fetch('https://coursebay-backend-a1dy.onrender.com/users/sign-out', {
         method: 'POST',
         credentials: 'include',
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json',
-          'Access-Control-Allow-Origin': 'http://localhost:5173',
         },
       });
 
@@ -141,12 +138,11 @@ function Profile() {
   useEffect(()=>{
     const fetchUploadedCourses = async () =>{
       try{
-        const response = await fetch('http://localhost:8000/users/fetchUploadedCourses',{
+        const response = await fetch('https://coursebay-backend-a1dy.onrender.com/users/fetchUploadedCourses',{
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json',
-            'Access-Control-Allow-Origin': 'http://localhost:5173',
           },
           body: JSON.stringify({ userId: userData._id }),
         });

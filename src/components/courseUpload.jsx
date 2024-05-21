@@ -36,14 +36,13 @@ function CourseUpload() {
       formData.append("userId", userId);
 
       const response = await axios.post(
-        "http://localhost:8000/course/upload-course",
+        "https://coursebay-backend-a1dy.onrender.com/course/upload-course",
         formData,
         {
           withCredentials: true,
           headers: {
             "Content-Type": "multipart/form-data",
             "Accept" : "application/json",
-            "Access-Control-Allow-Origin": "http://localhost:5173",
           },
         }
       );
