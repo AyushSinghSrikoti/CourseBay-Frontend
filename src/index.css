@@ -1,0 +1,14 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    color: rgb(87, 86, 86);
+    height:100vh;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
