@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './navbar';
 import Footer from './footer';
-import Filter from './Filter';
+import Sorter from './sorter';
 import DiscussionThread from './discussionThread';
 
 function Courses() {
@@ -64,7 +64,7 @@ function Courses() {
             <hr />
             <h1 className="text-3xl font-bold mb-4 mx-4">Courses</h1>
             <div className="flex flex-col-reverse md:flex-row gap-4 m-4 w-auto">
-                <Filter onApplyFilter={handleApplyFilter} />
+                <Sorter onApplyFilter={handleApplyFilter} />
                 <div className="m-auto h-full w-4/5 flex flex-col gap-12">
                     {showDiscussionThread && selectedCourse ? (
                         <div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Filter({ onApplyFilter }) {
+function  Sorter({ onApplyFilter }) {
   const [topic, setTopic] = useState('');
   const [cost, setCost] = useState('');
 
@@ -41,4 +41,4 @@ function Filter({ onApplyFilter }) {
   );
 }
 
-export default Filter;
+export default Sorter;
