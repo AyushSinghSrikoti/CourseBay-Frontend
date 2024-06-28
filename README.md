@@ -3,6 +3,7 @@
 Welcome to the Course Comparison Platform. This website allows users to browse or upload their own courses, enabling them to see all available courses on the market in one single platform, compare them, and get reviews and ratings.
 
 - **Hosted Link**: https://coursebay-xi.vercel.app/
+- **Backend Code Link**: https://github.com/AyushSinghSrikoti/CourseBay-backend.git
 
 ## Table of Contents
 - [About](#about)
